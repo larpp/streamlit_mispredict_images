@@ -5,7 +5,7 @@ import glob
 import pandas as pd
 
 
-df = pd.read_csv('final.csv')
+df = pd.read_csv('answer_GPT.csv')
 
 base_folder = 'misclassify'
 folder = os.path.join(base_folder, 'val50')
