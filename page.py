@@ -5,7 +5,7 @@ import glob
 import pandas as pd
 
 
-df = pd.read_csv('answer_GPT.csv')
+df = pd.read_csv('categorize_image4.csv')
 
 base_folder = 'misclassify'
 folder = os.path.join(base_folder, 'val50')
@@ -54,6 +54,6 @@ if image_files:
         cols[1].image(mis_image, caption=f"Mispredicted:\n{'_'.join(image_file.split('_')[3:])[:-5]}", use_container_width=True)
 
         if not matching_row.empty and pd.notna(matching_row.iloc[0]['answer']):
-            st.write(matching_row.iloc[0]['answer'])
+            st.write(matching_row.iloc[0]['category'])
 else:
     st.write("No images found in this folder.")
