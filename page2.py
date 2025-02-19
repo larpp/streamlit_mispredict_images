@@ -41,7 +41,7 @@ if image_files:
 
         # 왼쪽 컬럼에 이미지 출력
         cols[0].write(f'GT label: {selected_folder}')
-        cols[0].image(image, caption=f"Original Image:\n{'_'.join(image_file.split('_')[:3])}.JPEG", use_column_width=True)
+        cols[0].image(image, caption=f"Original Image:\n{'_'.join(image_file.split('_')[:3])}.JPEG", use_container_width=True)
 
         # 오른쪽 컬럼에 특정 텍스트만 빨갛게 표시, 글자 크기는 전체적으로 키움
         cols[1].markdown(
