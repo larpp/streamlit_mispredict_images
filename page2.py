@@ -4,7 +4,7 @@ from PIL import Image
 import glob
 import pandas as pd
 
-df = pd.read_csv('final.csv')
+df = pd.read_csv('_test.csv')
 
 base_folder = 'misclassify'
 folder = os.path.join(base_folder, 'val50')
@@ -50,8 +50,8 @@ if image_files:
         )
 
         # 정답 데이터 출력
-        # if not matching_row.empty and pd.notna(matching_row.iloc[0]['answer']):
-        #     st.write(matching_row.iloc[0]['answer'])
+        if not matching_row.empty and pd.notna(matching_row.iloc[0]['answer']):
+            st.write(matching_row.iloc[0]['answer'])
 else:
     st.write("No images found in this folder.")
 
